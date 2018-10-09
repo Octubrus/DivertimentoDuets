@@ -10,3 +10,16 @@
   position: sticky;
   top: 0;
 }
+
+.footerContainer {
+  padding: 5vw;
+}
+
+.footerBottom {
+  height: 50px;
+}
+
+.button {
+  margin-top: 15px;
+  width: 160px;
+}

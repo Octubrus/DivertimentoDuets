@@ -28,9 +28,7 @@
               "src/_redirects"
             ],
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
+              "src/divertimento-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -80,9 +78,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
+              "src/auds-divertimento.scss",
               "src/styles.scss"
             ],
             "scripts": [],

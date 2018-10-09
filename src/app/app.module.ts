@@ -7,8 +7,10 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
+import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NavMainComponent,
-    HomeComponent
+    HomeComponent,
+    DownloadMaterialsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatDialogModule,
     RouterModule.forRoot(routes)
+  ],
+  entryComponents: [
+    DownloadMaterialsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
