@@ -11,9 +11,11 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
@@ -23,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     NavMainComponent,
     HomeComponent,
-    DownloadMaterialsComponent
+    DownloadMaterialsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
