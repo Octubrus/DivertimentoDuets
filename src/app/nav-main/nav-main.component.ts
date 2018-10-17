@@ -23,4 +23,5 @@ export class NavMainComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DownloadMaterialsComponent, {});
   }
+
 }

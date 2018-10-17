@@ -2,19 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
 import { AboutComponent } from './about/about.component';
+import { MethodComponent } from './method/method.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
@@ -26,7 +28,8 @@ const routes: Routes = [
     NavMainComponent,
     HomeComponent,
     DownloadMaterialsComponent,
-    AboutComponent
+    AboutComponent,
+    MethodComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     MatDialogModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   entryComponents: [
     DownloadMaterialsComponent
