@@ -6,6 +6,7 @@
       <a mat-list-item routerLink="/home">Home</a>
       <a mat-list-item routerLink="/method">Method</a>
       <a mat-list-item routerLink="/about">About</a>
+      <a mat-list-item routerLink="/contact">Contact</a>
       <span fxFlex fxFill></span>
       <a mat-list-item href="https://www.amazon.co.uk/dp/1916435602" target="_blank">Get The Book</a>
       <a mat-list-item (click)="openDialog()">Download Material</a>
@@ -20,6 +21,7 @@
       <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/home">Home</a>
       <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/method">Method</a>
       <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/about">About</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/contact">Contact</a>
       <span fxFlex fxFill></span>
       <div fxFlex fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="end center" fxHide.xs="true" fxHide.sm="true">
         <a class="ctaButton" fxFlex="1 1 160px" mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602"
@@ -33,11 +35,15 @@
     </mat-toolbar>
     <router-outlet></router-outlet>
     <footer class="dark" fxLayout="row wrap" fxLayoutAlign="center center">
-      <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxLayout="row wrap"
+      <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxLayout="column" fxLayoutGap="10px"
         fxLayoutAlign="center center">
-        <a mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602" target="_blank">
+        <a mat-stroked-button color="accent" href="https://www.amazon.co.uk/dp/1916435602" target="_blank">
           Get The Book
         </a>
+        <a mat-button class="whiteText" routerLink="/home">Home</a>
+        <a mat-button class="whiteText" routerLink="/method">Method</a>
+        <a mat-button class="whiteText" routerLink="/about">About</a>
+        <a mat-button class="whiteText" routerLink="/contact">Contact</a>
       </div>
       <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%">
         <mat-list>

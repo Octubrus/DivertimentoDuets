@@ -8,16 +8,18 @@ import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatExpansionModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
 import { AboutComponent } from './about/about.component';
 import { MethodComponent } from './method/method.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
@@ -29,7 +31,8 @@ const routes: Routes = [
     HomeComponent,
     DownloadMaterialsComponent,
     AboutComponent,
-    MethodComponent
+    MethodComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ const routes: Routes = [
     MatIconModule,
     MatListModule,
     MatDialogModule,
+    MatExpansionModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled'
     })
