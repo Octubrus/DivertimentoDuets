@@ -10,7 +10,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $divertimento-app-primary: mat-palette($mat-grey, 900, 800, #000000);
-$divertimento-app-accent:  mat-palette($mat-amber, A200, A100, A300);
+$divertimento-app-accent:  mat-palette($mat-blue, 300, 200, 400);
 
 // The warn palette is optional (defaults to red).
 $divertimento-app-warn:    mat-palette($mat-red);

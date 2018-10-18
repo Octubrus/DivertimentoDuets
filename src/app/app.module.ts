@@ -14,9 +14,11 @@ import { DownloadMaterialsComponent } from './download-materials/download-materi
 import { AboutComponent } from './about/about.component';
 import { MethodComponent } from './method/method.component';
 import { ContactComponent } from './contact/contact.component';
+import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'books', component: BooksComponent },
   { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
@@ -32,7 +34,8 @@ const routes: Routes = [
     DownloadMaterialsComponent,
     AboutComponent,
     MethodComponent,
-    ContactComponent
+    ContactComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
