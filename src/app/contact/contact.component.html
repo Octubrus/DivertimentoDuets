@@ -55,8 +55,14 @@
           How do I buy directly from Phil?
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>If you wish to buy your copy directly from Phil, just write to us directly here through the website. We will
-        always be happy to hear from you and if you have any extra questions please feel free to ask.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
+        <p>If you wish to buy directly from Phil here <span>
+            <button id="paypal" type="input" mat-raised-button color="accent" name="submit">Buy Directly (PayPal)</button>
+          </span></p>
+        <p>If however you have any queries, please feel free to contact us on the email link below.</p>
+      </form>
     </mat-expansion-panel>
     <mat-expansion-panel>
       <mat-expansion-panel-header [expandedHeight]="expandedHeaderHeight" [collapsedHeight]="collapsedHeaderHeight">

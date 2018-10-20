@@ -1,21 +1,28 @@
 <div fxLayout="row wrap" class="padder">
 
   <img fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center" src="assets/images/cover.jpg"
-    class="innerPadder">
+    class="marginBottom">
 
-  <div fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center center" class="innerPadder"
+  <div fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center center" class="marginBottom"
     fxLayout="column">
-    <div fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="start center" class="innerPadder">
-      <h2 fxFlex="1 1 100%" class="price">£18.00</h2>
-      <a fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602"
+    <h2 fxFlex class="price">£18.00</h2>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" fxFlex="1 1 30%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="stretch start" class="marginLeft">
+      <a ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602"
         target="_blank">
         Buy on Amazon
       </a>
-      <a fxHide.xs="true" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary" (click)="openDialog()">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
+      <div ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" fxLayout="column">
+        <button id="paypal" type="input" mat-raised-button color="accent" name="submit">Buy Directly (PayPal)</button>
+        <label for="paypal">Free UK postage</label>
+      </div>
+      <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary" (click)="openDialog()">
         Free Download Material
       </a>
-    </div>
-    <mat-list fxFlex="1 1 100%" class="leftText">
+    </form>
+
+    <mat-list fxFlex="1 1 65%" class="leftText marginLeft marginBottom">
       <mat-list-item>AUTHOR: Phil Holland</mat-list-item>
       <mat-list-item>ILLUSTRATOR: Lorna Romanenghi</mat-list-item>
       <mat-list-item>FORMAT: Paperback (Saddle-stitch)</mat-list-item>
@@ -28,21 +35,19 @@
     </mat-list>
   </div>
 
-  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="center" src="assets/images/square-6.jpg"
-    class="innerPadder">
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/square-6.jpg">
 
-  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="center" src="assets/images/square-5.jpg"
-    class="innerPadder">
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/square-5.jpg">
 
-  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="center" src="assets/images/square-12.jpg"
-    class="innerPadder">
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/square-12.jpg"
+    class="marginBottom">
 
-  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="center" src="assets/images/square-4.jpg"
-    class="innerPadder">
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/square-4.jpg"
+    class="marginBottom">
 
-  <div fxFlex="1 1 100%" fxFlexAlign="center" class="innerPadder">
+  <div fxFlex="1 1 100%" fxFlexAlign="center" class="marginBottom">
     <div class="leftText">
-      <h1 class="innerPadder">Description</h1>
+      <h1>Description</h1>
       <ul>
         <li>23 Original duets for Beginner Violin</li>
         <li>No need for piano accompaniment</li>
@@ -70,14 +75,20 @@
     </div>
   </div>
 
-  <div fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center center" class="innerPadder">
-    <a fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602"
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center start" class="marginBottom">
+    <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent" href="https://www.amazon.co.uk/dp/1916435602"
       target="_blank">
       Buy on Amazon
     </a>
-    <a fxHide.xs="true" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary" (click)="openDialog()">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
+    <div ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" fxLayout="column">
+      <button id="paypal" type="input" mat-raised-button color="accent" name="submit">Buy Directly (PayPal)</button>
+      <label for="paypal">Free UK postage</label>
+    </div>
+    <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary" (click)="openDialog()">
       Free Download Material
     </a>
-  </div>
+  </form>
 
 </div>
