@@ -1,8 +1,8 @@
-<div fxLayout="column" fxLayoutAlign="start center" class="padder" fxLayoutGap="40px">
+<div fxLayout="row wrap" fxLayoutAlign="center center" class="padder">
 
-  <h2>FAQ</h2>
+  <h2 fxFlex="1 1 100%" class="centerText">FAQ</h2>
 
-  <mat-accordion ngClass.md="narrowPadder" ngClass.lg="narrowPadder">
+  <mat-accordion fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 75%">
     <mat-expansion-panel>
       <mat-expansion-panel-header [expandedHeight]="expandedHeaderHeight" [collapsedHeight]="collapsedHeaderHeight">
         <mat-panel-title>
@@ -58,9 +58,17 @@
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
-        <p>If you wish to buy directly from Phil here <span>
-            <button id="paypal" type="input" mat-raised-button color="accent" name="submit">Buy Directly (PayPal)</button>
-          </span></p>
+        <p>You can buy directly from Phil here
+          <span>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
+              <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+                name="submit" alt="PayPal – The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </span>
+        </p>
         <p>If however you have any queries, please feel free to contact us on the email link below.</p>
       </form>
     </mat-expansion-panel>
@@ -75,7 +83,7 @@
     </mat-expansion-panel>
   </mat-accordion>
 
-  <div>
+  <div fxFlex="1 1 100%" class="centerText padder">
     <h2>Contact Us...</h2>
     <p>For any questions or to buy directly from us, email: <a href="mailto:philhollandpublications@gmail.com">philhollandpublications@gmail.com</a></p>
   </div>
