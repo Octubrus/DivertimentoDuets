@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatExpansionModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatTabsModule, MatExpansionModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
 import { AboutComponent } from './about/about.component';
 import { MethodComponent } from './method/method.component';
 import { ContactComponent } from './contact/contact.component';
 import { BooksComponent } from './books/books.component';
+import { Volume1Component } from './books/volume1/volume1.component';
+import { Volume2Component } from './books/volume2/volume2.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,7 +37,9 @@ const routes: Routes = [
     AboutComponent,
     MethodComponent,
     ContactComponent,
-    BooksComponent
+    BooksComponent,
+    Volume1Component,
+    Volume2Component
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,7 @@ const routes: Routes = [
     MatListModule,
     MatDialogModule,
     MatExpansionModule,
+    MatTabsModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled'
     })
