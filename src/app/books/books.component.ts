@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { DownloadMaterialsComponent } from '../download-materials/download-materials.component';
 
 @Component({
   selector: 'app-books',
@@ -9,13 +7,9 @@ import { DownloadMaterialsComponent } from '../download-materials/download-mater
 })
 export class BooksComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DownloadMaterialsComponent, {});
   }
 
 }
