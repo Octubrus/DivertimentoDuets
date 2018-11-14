@@ -1,13 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav fxLayout="column" #drawer class="sidenav" fixedInViewport="true" [attr.role]="dialog" [mode]="'over'"
     [opened]="false">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list fxFlex fxLayout="column">
-      <a mat-list-item routerLink="/home">Home</a>
-      <a mat-list-item routerLink="/books">Books</a>
-      <a mat-list-item routerLink="/method">Method</a>
-      <a mat-list-item routerLink="/about">About</a>
-      <a mat-list-item routerLink="/contact">Contact</a>
+      <a mat-list-item routerLinkActive="lightgray" routerLink="/home">Home</a>
+      <a mat-list-item routerLinkActive="lightgray" routerLink="/books">Books</a>
+      <a mat-list-item routerLinkActive="lightgray" routerLink="/method">Method</a>
+      <a mat-list-item routerLinkActive="lightgray" routerLink="/about">About</a>
+      <a mat-list-item routerLinkActive="lightgray" routerLink="/contact">Contact</a>
       <span fxFlex fxFill></span>
       <a mat-list-item routerLink="/books">Get The Book</a>
       <a mat-list-item (click)="openDialog()">Download Material</a>
@@ -19,11 +18,11 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span fxFlex>Divertimento Duets</span>
-      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/home">Home</a>
-      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/books">Books</a>
-      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/method">Method</a>
-      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/about">About</a>
-      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLink="/contact">Contact</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLinkActive="blue" routerLink="/home">Home</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLinkActive="blue" routerLink="/books">Books</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLinkActive="blue" routerLink="/method">Method</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLinkActive="blue" routerLink="/about">About</a>
+      <a fxFlex="1 1 70px" fxHide.xs="true" mat-button routerLinkActive="blue" routerLink="/contact">Contact</a>
       <span fxFlex fxFill></span>
       <div fxFlex fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="end center" fxHide.xs="true" fxHide.sm="true">
         <a class="ctaButton" fxFlex="1 1 160px" mat-raised-button color="accent" routerLink="/books">
@@ -34,18 +33,24 @@
         </a>
       </div>
     </mat-toolbar>
+    <mat-toolbar class="redBg" fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="center center">
+      <h4 class="whiteText">Free Christmas Music</h4>
+      <a class="whiteBg" mat-stroked-button href="assets/materials/Free-Divertimento-Duets-Christmas-Special.zip">
+        <mat-icon>get_app</mat-icon><span> Download</span><span fxHide.xs="true"> Now</span>
+      </a>
+    </mat-toolbar>
     <router-outlet></router-outlet>
     <footer class="dark" fxLayout="row wrap" fxLayoutAlign="center center">
-      <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxLayout="column" fxLayoutGap="10px"
-        fxLayoutAlign="center center">
+      <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxLayout="column"
+        fxLayoutGap="10px" fxLayoutAlign="center center">
         <a mat-stroked-button color="accent" routerLink="/books">
           Get The Book
         </a>
-        <a mat-button class="whiteText" routerLink="/home">Home</a>
-        <a mat-button class="whiteText" routerLink="/books">Books</a>
-        <a mat-button class="whiteText" routerLink="/method">Method</a>
-        <a mat-button class="whiteText" routerLink="/about">About</a>
-        <a mat-button class="whiteText" routerLink="/contact">Contact</a>
+        <a mat-button class="whiteText" routerLinkActive="blue" routerLink="/home">Home</a>
+        <a mat-button class="whiteText" routerLinkActive="blue" routerLink="/books">Books</a>
+        <a mat-button class="whiteText" routerLinkActive="blue" routerLink="/method">Method</a>
+        <a mat-button class="whiteText" routerLinkActive="blue" routerLink="/about">About</a>
+        <a mat-button class="whiteText" routerLinkActive="blue" routerLink="/contact">Contact</a>
       </div>
       <div class="footerContainer" fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%">
         <mat-list>

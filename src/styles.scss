@@ -18,6 +18,10 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
     color: #fafafa;
 }
 
+.whiteBg {
+    background-color: #fafafa;
+}
+
 .black {
     background-color: #000000;
 }
@@ -26,6 +30,16 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
 }
 .gray {
     background-color: #484848;
+}
+.lightgray {
+    background-color: lightgray !important;
+}
+.blue {
+    color: #64b5f6;
+}
+
+.redBg {
+    background-color: #ef5350;
 }
 
 .grayText {
@@ -39,3 +53,4 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
 .bigPadder {
     padding: 15vh 5vw;
 }
+
