@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
@@ -54,6 +55,7 @@ const routes: Routes = [
     MatDialogModule,
     MatExpansionModule,
     MatTabsModule,
+    MatCardModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled'
     })
