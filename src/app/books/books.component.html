@@ -1,4 +1,8 @@
 <mat-tab-group mat-stretch-tabs>
-  <mat-tab label="Volume 1"><app-volume1></app-volume1></mat-tab>
-  <mat-tab label="Volume 2 (Coming soon)"><app-volume2></app-volume2></mat-tab>
+  <mat-tab label="Volume 1">
+    <app-volume1 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada"></app-volume1>
+  </mat-tab>
+  <mat-tab label="Volume 2 (Coming soon)">
+    <app-volume2></app-volume2>
+  </mat-tab>
 </mat-tab-group>

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
@@ -18,10 +18,12 @@ import { ContactComponent } from './contact/contact.component';
 import { BooksComponent } from './books/books.component';
 import { Volume1Component } from './books/volume1/volume1.component';
 import { Volume2Component } from './books/volume2/volume2.component';
+import { LocationResolverService } from './location-resolver.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'books', component: BooksComponent },
+  { path: 'books', component: BooksComponent, resolve: { data: LocationResolverService } },
   { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
@@ -56,6 +58,7 @@ const routes: Routes = [
     MatExpansionModule,
     MatTabsModule,
     MatCardModule,
+    HttpClientModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled'
     })

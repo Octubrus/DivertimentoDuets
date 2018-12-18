@@ -5,40 +5,59 @@
 
   <div fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center center" class="marginBottom"
     fxLayout="column">
-    <h2 fxFlex class="price">£18.00</h2>
+    <h2 fxFlex class="price">£{{price}}</h2>
     <div fxFlex="1 1 40%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="stretch start" class="marginLeft">
       <div ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="column"
         fxLayoutAlign="start start">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <h4>Includes Postage when buying with PayPal</h4>
+        <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
-          <table>
-          <tr><td><input type="hidden" name="on0" value="Divertimento Duets,Volume 1">Divertimento Duets,Volume 1</td></tr><tr><td><select name="os0">
-            <option value="Free postage UK">Free postage UK £18.00 GBP</option>
-            <option value="Including Postage to  Europe">Including Postage to  Europe £20.00 GBP</option>
-            <option value="Including Postage to USA and Canada">Including Postage to USA and Canada £22.00 GBP</option>
-            <option value="Including postage to Rest of World">Including postage to Rest of World £23.00 GBP</option>
-          </select> </td></tr>
-          </table>
-          <input type="hidden" name="currency_code" value="GBP">
-          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <input type="hidden" name="hosted_button_id" value="T9ZYP2BMH6EG6">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+            alt="PayPal – The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
         </form>
+
+        <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="59HZ8LQ6PZFXJ">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+            alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="RFFF9DRLKJZ8A">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+            alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+          target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="VTBXWJQ9T7AGL">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+            alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
       </div>
-      <a ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent"
+      <a ngClass.xs="" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent"
         href="https://www.amazon.co.uk/dp/1916435602" target="_blank">
         Buy on Amazon
       </a>
       <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary" (click)="openDialog()">
         Free Download Material
       </a>
-      <mat-card class="redBg whiteText">
+      <!-- <mat-card class="redBg whiteText">
         <h4>Buy before 16th December 2018 and receive a beautiful set of 10 postcards of illustrations from the book for free!</h4>
         <h4>The perfect gift for a beginner violinist.</h4>
-      </mat-card>
+      </mat-card> -->
     </div>
 
-    <mat-list fxFlex="1 1 50%" class="leftText marginLeft marginBottom">
+    <mat-list fxFlex="1 1 65%" class="leftText marginLeft marginBottom">
       <mat-list-item>AUTHOR: Phil Holland</mat-list-item>
       <mat-list-item>ILLUSTRATOR: Lorna Romanenghi</mat-list-item>
       <mat-list-item>FORMAT: Paperback (Saddle-stitch)</mat-list-item>
@@ -94,22 +113,40 @@
   <div fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center start" class="marginBottom">
     <div ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="column"
       fxLayoutAlign="center center">
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <h4>Includes Postage when buying with PayPal</h4>
+      <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="6W4RJWA7AE6R6">
-        <table>
-        <tr><td><input type="hidden" name="on0" value="Divertimento Duets,Volume 1">Divertimento Duets,Volume 1</td></tr><tr><td>
-        <select name="os0" >
-          <option value="Free postage UK">Free postage UK £18.00 GBP</option>
-          <option value="Including Postage to  Europe">Including Postage to  Europe £20.00 GBP</option>
-          <option value="Including Postage to USA and Canada">Including Postage to USA and Canada £22.00 GBP</option>
-          <option value="Including postage to Rest of World">Including postage to Rest of World £23.00 GBP</option>
-        </select> </td></tr>
-        </table>
-        <input type="hidden" name="currency_code" value="GBP">
-        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <input type="hidden" name="hosted_button_id" value="T9ZYP2BMH6EG6">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+          alt="PayPal – The safer, easier way to pay online!">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
       </form>
+
+      <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="59HZ8LQ6PZFXJ">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+          alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="RFFF9DRLKJZ8A">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+          alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+        target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VTBXWJQ9T7AGL">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+          alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
     </div>
     <a ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent"
       href="https://www.amazon.co.uk/dp/1916435602" target="_blank">

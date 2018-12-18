@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DownloadMaterialsComponent } from 'src/app/download-materials/download-materials.component';
 
@@ -8,6 +8,11 @@ import { DownloadMaterialsComponent } from 'src/app/download-materials/download-
   styleUrls: ['./volume1.component.scss']
 })
 export class Volume1Component implements OnInit {
+
+  @Input() price;
+  @Input() forUk;
+  @Input() forEurope;
+  @Input() forUSAorCanada;
 
   constructor(public dialog: MatDialog) { }
 
