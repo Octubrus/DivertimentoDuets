@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DownloadMaterialsComponent } from 'src/app/download-materials/download-materials.component';
+import { DownloadMaterialsComponentV1 } from 'src/app/download-materials/volume1/download-v1.component';
 
 @Component({
   selector: 'app-volume1',
@@ -20,7 +20,7 @@ export class Volume1Component implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DownloadMaterialsComponent, {});
+    const dialogRef = this.dialog.open(DownloadMaterialsComponentV1, {});
   }
 
 }

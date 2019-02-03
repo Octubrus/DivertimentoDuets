@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { NavMainComponent } from './nav-main/nav-main.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatTabsModule, MatExpansionModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatTabsModule, MatExpansionModule, MatToolbarModule,
+  MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
-import { DownloadMaterialsComponent } from './download-materials/download-materials.component';
+import { DownloadMaterialsComponentV1 } from './download-materials/volume1/download-v1.component';
 import { AboutComponent } from './about/about.component';
 import { MethodComponent } from './method/method.component';
 import { ContactComponent } from './contact/contact.component';
@@ -20,6 +21,7 @@ import { Volume1Component } from './books/volume1/volume1.component';
 import { Volume2Component } from './books/volume2/volume2.component';
 import { LocationResolverService } from './location-resolver.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DownloadMaterialsComponentV2 } from './download-materials/volume2/download-v2.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,7 +38,8 @@ const routes: Routes = [
     AppComponent,
     NavMainComponent,
     HomeComponent,
-    DownloadMaterialsComponent,
+    DownloadMaterialsComponentV1,
+    DownloadMaterialsComponentV2,
     AboutComponent,
     MethodComponent,
     ContactComponent,
@@ -64,7 +67,8 @@ const routes: Routes = [
     })
   ],
   entryComponents: [
-    DownloadMaterialsComponent
+    DownloadMaterialsComponentV1,
+    DownloadMaterialsComponentV2
   ],
   providers: [],
   bootstrap: [AppComponent]

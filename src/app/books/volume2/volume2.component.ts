@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { DownloadMaterialsComponentV2 } from 'src/app/download-materials/volume2/download-v2.component';
 
 @Component({
   selector: 'app-volume2',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Volume2Component implements OnInit {
 
-  constructor() { }
+  @Input() price;
+  @Input() forUk;
+  @Input() forEurope;
+  @Input() forUSAorCanada;
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DownloadMaterialsComponentV2, {});
   }
 
 }

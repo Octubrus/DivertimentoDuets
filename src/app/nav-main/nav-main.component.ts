@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MatDialog } from '@angular/material/dialog';
-import { DownloadMaterialsComponent } from '../download-materials/download-materials.component';
 
 @Component({
   selector: 'app-nav-main',
@@ -17,11 +15,6 @@ export class NavMainComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver,
-    public dialog: MatDialog) { }
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DownloadMaterialsComponent, {});
-  }
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
 }
