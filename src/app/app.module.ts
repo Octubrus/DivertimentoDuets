@@ -24,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DownloadMaterialsComponentV2 } from './download-materials/volume2/download-v2.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, resolve: { data: LocationResolverService } },
   { path: 'books', component: BooksComponent, resolve: { data: LocationResolverService } },
   { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
