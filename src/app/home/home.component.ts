@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   forUk: boolean;
   forUSAorCanada: boolean;
+  forEurope: boolean;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
     const client = this.route.snapshot.data.data;
     this.forUk = client.country === 'GB';
     this.forUSAorCanada = client.country === 'US' || client.country === 'CA';
+    this.forEurope = client.continent_code === 'EU' && client.country !== 'GB';
   }
 
 }
