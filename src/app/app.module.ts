@@ -23,7 +23,6 @@ import { LocationResolverService } from './location-resolver.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DownloadMaterialsComponentV2 } from './download-materials/volume2/download-v2.component';
 import { PolicyComponent } from './policy/policy.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, resolve: { data: LocationResolverService } },
@@ -31,7 +30,6 @@ const routes: Routes = [
   { path: 'method', component: MethodComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'freetaster', component: SubscribeComponent },
   { path: 'policy', component: PolicyComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
@@ -50,8 +48,7 @@ const routes: Routes = [
     BooksComponent,
     Volume1Component,
     Volume2Component,
-    PolicyComponent,
-    SubscribeComponent
+    PolicyComponent
   ],
   imports: [
     BrowserModule,
