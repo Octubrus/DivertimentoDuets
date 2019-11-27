@@ -1,0 +1,174 @@
+<div fxLayout="row wrap" class="padder">
+
+  <img fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center" src="assets/images/scale1/cover1.jpg"
+    class="marginBottom">
+
+  <div fxFlex.xs="1 1 100%" fxFlex.sm="1 1 100%" fxFlex="1 1 50%" fxFlexAlign="center center" class="marginBottom"
+    fxLayout="column">
+    <h2 fxFlex class="price">£{{price}}</h2>
+    <div fxFlex="1 1 40%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="stretch start" class="marginLeft">
+      <div ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="column"
+        fxLayoutAlign="start start">
+        <h4>Includes Postage when buying with PayPal</h4>
+        <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="Y74BR4JEVGFFG">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+            name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="R6WJECLTS3G9G">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+            name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="UKE2YBS98DQP4">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+            name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr"
+          method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="R69HRDWCA8Q9J">
+          <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+            name="submit" alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+      </div>
+      <!-- <a ngClass.xs="" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button color="accent"
+        href="https://www.amazon.co.uk/dp/1916435602" target="_blank">
+        Buy on Amazon
+      </a> -->
+      <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary"
+        (click)="openDialog()">
+        Free Download Material
+      </a>
+
+    </div>
+
+    <mat-list fxFlex="1 1 65%" class="leftText marginLeft marginBottom">
+      <mat-list-item>AUTHOR: Phil Holland</mat-list-item>
+      <mat-list-item>ILLUSTRATOR: Lorna Romanenghi</mat-list-item>
+      <mat-list-item>FORMAT: Paperback (Saddle-stitch)</mat-list-item>
+      <mat-list-item>PAGES: 40 Pages, Full Colour</mat-list-item>
+      <mat-list-item>ILLUSTRATIONS: 35, Full Colour</mat-list-item>
+      <mat-list-item>PUBLISHER: Phil Holland Publications</mat-list-item>
+      <mat-list-item>EDITION: Limited First Edition</mat-list-item>
+      <mat-list-item>PUBLICATION DATE :06/12/2019</mat-list-item>
+      <mat-list-item>ISBN: 978-1-9164356-2-9</mat-list-item>
+    </mat-list>
+  </div>
+
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/scale1/book1square1.jpg">
+
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/scale1/book1square2.jpg">
+
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/scale1/pages1square.jpg"
+    class="marginBottom">
+
+  <img fxFlex.xs="1 1 50%" fxFlex.sm="1 1 50%" fxFlex="1 1 25%" fxFlexAlign="start" src="assets/images/scale1/back1square.jpg"
+    class="marginBottom">
+
+  <div fxFlex="1 1 100%" fxFlexAlign="center" class="marginBottom">
+    <div class="leftText">
+      <h1>Description</h1>
+      <ul>
+        <li>Scales were never this much fun!</li>
+        <li>The “Divertimento Scale and Arpeggio Duets” series is aimed at helping
+          the beginner violinist work on important hand and ear training, in the
+          recognition of musical patterns, sight-reading skills and so much more.</li>
+        <li>Each volume in the Divertimento Duets series has a corresponding Scale
+          and Arpeggio Duet book of an appropriate technical level.</li>
+        <li>The exercises are structured to enable gradual technical and musical
+          development while also being fun to play.</li>
+        <li>Equal level duets, ideal for one-on-one lessons as well as group teaching.</li>
+        <li>The first book in the series is aimed at complete beginners. As such, it focuses
+          on the three 1 Octave major scales and arpeggios (G, D and A) which present the
+          first finger pattern that we encounter when learning the violin.</li>
+        <li>MP3 recordings of all the pieces in the book and extensive teacher&#39;s notes are
+          available as FREE downloads from this website with the purchase of this book.</li>
+      </ul>
+      <p>I love scales. However, for most young players learning an instrument, scales
+        and exercises are the spinach and broccoli of the music world and they’d rather
+        skip them and go straight to dessert. I wanted to include books in the
+        Divertimento Duets series which address this important part of hand and ear
+        training while hopefully making them more appealing and fun.</p>
+      <p>This is why each Volume in the Divertimento Duets series has a Scale and
+        Arpeggio Duet book of an appropriate technical level, integrating and
+        complementing the main books. Used together they constitute a complete
+        methodology for the beginner violinist in their first forays towards becoming an
+        accomplished violinist and musician.</p>
+      <p>When learning through duets, the ear is being trained subliminally to hear
+        intervals, to listen critically and adapt bad intonation accordingly, over time
+        helping the student develop a strong sense of good intonation. Even in these
+        very first exercises, the ear is starting to recognise intervals, which will also
+        serve the student well when ultimately progressing to double-stopped scales.</p>
+      <p>These exercises also help the student to recognise and understand musical
+        patterns that they will encounter in the pieces they play, so while these are
+        excellent for hand and ear training, they also ultimately help enormously with
+        the development of sight reading skills.</p>
+      <p>These scale books maintain the Divertimento Duets premise of equal-level
+        parts, allowing both student and teacher to play together (as well as student and
+        student), making them perfect for one on one lessons as well as group teaching
+        situations.</p>
+    </div>
+  </div>
+
+  <div fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center start" class="marginBottom">
+    <div ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="column"
+      fxLayoutAlign="center center">
+      <h4>Includes Postage when buying with PayPal</h4>
+      <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="Y74BR4JEVGFFG">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+          name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="R6WJECLTS3G9G">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+          name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="UKE2YBS98DQP4">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+          name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+        target="_blank">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="R69HRDWCA8Q9J">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+          name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+    </div>
+    <!-- <a ngClass.xs="smallMargin" class="marginBottom" fxFlex.xs="1 1 100%" fxFlex="1 1 160px" mat-raised-button
+      color="accent" href="https://www.amazon.co.uk/dp/1916435602" target="_blank">
+      Buy on Amazon
+    </a> -->
+    <a ngClass.xs="smallMargin" fxFlex.xs="1 1 100%" fxFlex="1 1 180px" mat-stroked-button color="primary"
+      (click)="openDialog()">
+      Free Download Material
+    </a>
+  </div>
+
+</div>

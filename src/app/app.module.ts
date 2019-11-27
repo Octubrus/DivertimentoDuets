@@ -13,6 +13,7 @@ import { MatTabsModule, MatExpansionModule, MatToolbarModule,
   MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { DownloadMaterialsComponentV1 } from './download-materials/volume1/download-v1.component';
+import { DownloadMaterialsComponentS1 } from './download-materials/scale1/download-s1.component';
 import { AboutComponent } from './about/about.component';
 import { MethodComponent } from './method/method.component';
 import { ContactComponent } from './contact/contact.component';
@@ -22,7 +23,10 @@ import { Volume2Component } from './books/volume2/volume2.component';
 import { LocationResolverService } from './location-resolver.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DownloadMaterialsComponentV2 } from './download-materials/volume2/download-v2.component';
+import { DownloadMaterialsComponentS2 } from './download-materials/scale2/download-s2.component';
 import { PolicyComponent } from './policy/policy.component';
+import { Scale1Component } from './books/scale1/scale1.component';
+import { Scale2Component } from './books/scale2/scale2.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, resolve: { data: LocationResolverService } },
@@ -42,13 +46,17 @@ const routes: Routes = [
     HomeComponent,
     DownloadMaterialsComponentV1,
     DownloadMaterialsComponentV2,
+    DownloadMaterialsComponentS1,
+    DownloadMaterialsComponentS2,
     AboutComponent,
     MethodComponent,
     ContactComponent,
     BooksComponent,
     Volume1Component,
     Volume2Component,
-    PolicyComponent
+    PolicyComponent,
+    Scale1Component,
+    Scale2Component
   ],
   imports: [
     BrowserModule,
@@ -71,7 +79,9 @@ const routes: Routes = [
   ],
   entryComponents: [
     DownloadMaterialsComponentV1,
-    DownloadMaterialsComponentV2
+    DownloadMaterialsComponentV2,
+    DownloadMaterialsComponentS1,
+    DownloadMaterialsComponentS2
   ],
   providers: [],
   bootstrap: [AppComponent]
