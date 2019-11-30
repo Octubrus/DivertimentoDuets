@@ -1,9 +1,219 @@
+<section fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+  <div fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="row"
+  fxLayoutAlign="center center" class="books">
+    <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="EEQAS665FTZK2">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="Choice of Books">2-Book Bundle £30 (Save £6) + Free Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 + 2">Volumes 1 + 2 </option>
+              <option value="Scales Books 1+ 2">Scales Books 1+ 2 </option>
+              <option value="Volume 1 + Scale Book 1">Volume 1 + Scale Book 1 </option>
+              <option value="Volume 2 + Scale Book 2">Volume 2 + Scale Book 2 </option>
+              <option value="2 Copies Volume 1">2 Copies Volume 1 </option>
+              <option value="2 Copies Volume 2">2 Copies Volume 2 </option>
+              <option value="2 Copies Scales 1">2 Copies Scales 1 </option>
+              <option value="2 Copies Scales 2">2 Copies Scales 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="3AYP758RL3LT6">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">2-Book Bundle £30 (Save £6) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 and 2">Volumes 1 and 2 </option>
+              <option value="Scales Books 1 and 2">Scales Books 1 and 2 </option>
+              <option value="Volume 1 and Scales Book 1">Volume 1 and Scales Book 1 </option>
+              <option value="Volume 2 and Scales Book 2">Volume 2 and Scales Book 2 </option>
+              <option value="2 x Volume 1">2 x Volume 1 </option>
+              <option value="2 x Volume 2">2 x Volume 2 </option>
+              <option value="2 x Scales Book 1">2 x Scales Book 1 </option>
+              <option value="2 x Scales Book 2">2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="63WADZD2FAXBQ">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">2-Book Bundle £30 (Save £6) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 + 2">Volumes 1 + 2 </option>
+              <option value="Scales Books 1 and 2">Scales Books 1 and 2 </option>
+              <option value="Volume 1 + Scales Book 1">Volume 1 + Scales Book 1 </option>
+              <option value="Volume 2 + Scales Book 2">Volume 2 + Scales Book 2 </option>
+              <option value="2 x Volume 1">2 x Volume 1 </option>
+              <option value="2 x Volume 2">2 x Volume 2 </option>
+              <option value="2 x Scales Book 1">2 x Scales Book 1 </option>
+              <option value="2 x Scales Book 2">2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+      target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="T7AL6E2HA8AA8">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">2-Book Bundle £30 (Save £6) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 + 2">Volumes 1 + 2 </option>
+              <option value="Scales Book 1 + 2">Scales Book 1 + 2 </option>
+              <option value="Volume 1 + Scales Book 1">Volume 1 + Scales Book 1 </option>
+              <option value="Volume 2 + Scales Book 2">Volume 2 + Scales Book 2 </option>
+              <option value="2 x Volume 1">2 x Volume 1 </option>
+              <option value="2 x Volume 2">2 x Volume 2 </option>
+              <option value="2 x Scales Book 1">2 x Scales Book 1 </option>
+              <option value="2 x Scales Book 2">2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+
+  <div fxFlex.xs="1 1 100%" fxFlex="1 1 100%" fxLayout="row"
+  fxLayoutAlign="center center" class="books">
+    <form *ngIf="forUk" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="E6RMR83ZV6ZFY">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">4-Book Bundle £57 (Save £15) + Free Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 + 2 Plus Scales Books 1 + 2">Volumes 1 + 2 Plus Scales Books 1 + 2 </option>
+              <option value="4 x Volume 1">4 x Volume 1 </option>
+              <option value="4 x Volume 2">4 x Volume 2 </option>
+              <option value="4 x Scales Book 1">4 x Scales Book 1 </option>
+              <option value="4 x Scales Book 2">4 x Scales Book 2 </option>
+              <option value="2 x Volume 1 Plus 2 x Scales Book 1">2 x Volume 1 Plus 2 x Scales Book 1 </option>
+              <option value="2 x Volume 2 Plus 2 x Scales Book 2">2 x Volume 2 Plus 2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="forEurope" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="DJJ7UB8GJKKBL">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">4-Book Bundle £57 (Save £15) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 and 2 Plus Scales Books 1 and 2">Volumes 1 and 2 Plus Scales Books 1 and 2
+              </option>
+              <option value="4 x Volume 1">4 x Volume 1 </option>
+              <option value="4 x Volume 2">4 x Volume 2 </option>
+              <option value="4 x Scales Book 1">4 x Scales Book 1 </option>
+              <option value="4 x Scales Book 2">4 x Scales Book 2 </option>
+              <option value="2 x Volume 1 Plus 2 x Scales Book 1">2 x Volume 1 Plus 2 x Scales Book 1 </option>
+              <option value="2 x Volume 2 Plus 2 x Scales Book 2">2 x Volume 2 Plus 2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="5UVPUDSMET36S">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">4-Book Bundle £57 (Save £15) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 and 2 Plus Scales Books 1 and 2">Volumes 1 and 2 Plus Scales Books 1 and 2
+              </option>
+              <option value="4 x Volume 1">4 x Volume 1 </option>
+              <option value="4 x Volume 2">4 x Volume 2 </option>
+              <option value="4 x Scales Book 1">4 x Scales Book 1 </option>
+              <option value="4 x Scales Book 2">4 x Scales Book 2 </option>
+              <option value="2 x Volume 1 Plus 2 x Scales Book 1">2 x Volume 1 Plus 2 x Scales Book 1 </option>
+              <option value="2 x Volume 2 Plus 2 x Scales Book 2">2 x Volume 2 Plus 2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <form *ngIf="!forUk && !forEurope && !forUSAorCanada" action="https://www.paypal.com/cgi-bin/webscr" method="post"
+      target="_blank">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="DHUPLRNBGLS9A">
+      <table>
+        <tr>
+          <td><input type="hidden" name="on0" value="CHOICE OF BOOKS">4-Book Bundle £57 (Save £15) + Postage</td>
+        </tr>
+        <tr>
+          <td><select name="os0">
+              <option value="Volumes 1 and 2 Plus Scales Books 1 and 2">Volumes 1 and 2 Plus Scales Books 1 and 2
+              </option>
+              <option value="4 x Volume 1">4 x Volume 1 </option>
+              <option value="4 x Volume 2">4 x Volume 2 </option>
+              <option value="4 x Scales Book 1">4 x Scales Book 1 </option>
+              <option value="4 x Scales Book 2">4 x Scales Book 2 </option>
+              <option value="2 x Volume 1 Plus 2 x Scales Book 1">2 x Volume 1 Plus 2 x Scales Book 1 </option>
+              <option value="2 x Volume 2 Plus 2 x Scales Book 2">2 x Volume 2 Plus 2 x Scales Book 2 </option>
+            </select> </td>
+        </tr>
+      </table>
+      <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0"
+        name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+</section>
 <mat-tab-group mat-stretch-tabs>
   <mat-tab label="Volume 1">
-    <app-volume1 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada"></app-volume1>
+    <app-volume1 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada">
+    </app-volume1>
   </mat-tab>
   <mat-tab label="Volume 2">
-    <app-volume2 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada"></app-volume2>
+    <app-volume2 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada">
+    </app-volume2>
   </mat-tab>
   <mat-tab label="Scale 1 (New)">
     <app-scale1 [price]="price" [forUk]="forUk" [forEurope]="forEurope" [forUSAorCanada]="forUSAorCanada"></app-scale1>
