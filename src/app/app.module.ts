@@ -27,6 +27,7 @@ import { DownloadMaterialsComponentS2 } from './download-materials/scale2/downlo
 import { PolicyComponent } from './policy/policy.component';
 import { Scale1Component } from './books/scale1/scale1.component';
 import { Scale2Component } from './books/scale2/scale2.component';
+import { DownloadMaterialsSimpleLesson } from './download-materials/simpleLesson/simpleLesson.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, resolve: { data: LocationResolverService } },
@@ -48,6 +49,7 @@ const routes: Routes = [
     DownloadMaterialsComponentV2,
     DownloadMaterialsComponentS1,
     DownloadMaterialsComponentS2,
+    DownloadMaterialsSimpleLesson,
     AboutComponent,
     MethodComponent,
     ContactComponent,
@@ -81,7 +83,8 @@ const routes: Routes = [
     DownloadMaterialsComponentV1,
     DownloadMaterialsComponentV2,
     DownloadMaterialsComponentS1,
-    DownloadMaterialsComponentS2
+    DownloadMaterialsComponentS2,
+    DownloadMaterialsSimpleLesson
   ],
   providers: [],
   bootstrap: [AppComponent]
